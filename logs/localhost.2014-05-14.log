@@ -26123,3 +26123,883 @@ Stacktrace:
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:744)
 
+mag 14, 2014 6:34:29 PM org.apache.catalina.core.StandardWrapperValve invoke
+Grave: Servlet.service() for servlet [jsp] in context with path [/corsostudi] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 61 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= csb.getCodice() %> </li> 
+62: 
+63:     <li> <%= csb.getNomeCorso() %> </li> 
+64:     
+
+
+An error occurred at line: 63 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+60: 
+61:     <li> <%= csb.getCodice() %> </li> 
+62: 
+63:     <li> <%= csb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= csb.getDurata() %> </li>
+66: 
+
+
+An error occurred at line: 65 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+62: 
+63:     <li> <%= csb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= csb.getDurata() %> </li>
+66: 
+67:     <li> <%= csb.getSede() %> </li>
+68: 
+
+
+An error occurred at line: 67 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+64:     
+65:     <li> <%= csb.getDurata() %> </li>
+66: 
+67:     <li> <%= csb.getSede() %> </li>
+68: 
+69:     <li> <%= csb.getInformativa() %> </li>
+70: 
+
+
+An error occurred at line: 69 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+66: 
+67:     <li> <%= csb.getSede() %> </li>
+68: 
+69:     <li> <%= csb.getInformativa() %> </li>
+70: 
+71:     <li> <%= csb.getNumIns() %> </li>
+72: 
+
+
+An error occurred at line: 71 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+68: 
+69:     <li> <%= csb.getInformativa() %> </li>
+70: 
+71:     <li> <%= csb.getNumIns() %> </li>
+72: 
+73:     <li> <%= csb.getCreditiTot() %> </li>
+74: 
+
+
+An error occurred at line: 73 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+70: 
+71:     <li> <%= csb.getNumIns() %> </li>
+72: 
+73:     <li> <%= csb.getCreditiTot() %> </li>
+74: 
+75:         <% } %>
+76: 
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 61 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= csb.getCodice() %> </li> 
+62: 
+63:     <li> <%= csb.getNomeCorso() %> </li> 
+64:     
+
+
+An error occurred at line: 63 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+60: 
+61:     <li> <%= csb.getCodice() %> </li> 
+62: 
+63:     <li> <%= csb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= csb.getDurata() %> </li>
+66: 
+
+
+An error occurred at line: 65 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+62: 
+63:     <li> <%= csb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= csb.getDurata() %> </li>
+66: 
+67:     <li> <%= csb.getSede() %> </li>
+68: 
+
+
+An error occurred at line: 67 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+64:     
+65:     <li> <%= csb.getDurata() %> </li>
+66: 
+67:     <li> <%= csb.getSede() %> </li>
+68: 
+69:     <li> <%= csb.getInformativa() %> </li>
+70: 
+
+
+An error occurred at line: 69 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+66: 
+67:     <li> <%= csb.getSede() %> </li>
+68: 
+69:     <li> <%= csb.getInformativa() %> </li>
+70: 
+71:     <li> <%= csb.getNumIns() %> </li>
+72: 
+
+
+An error occurred at line: 71 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+68: 
+69:     <li> <%= csb.getInformativa() %> </li>
+70: 
+71:     <li> <%= csb.getNumIns() %> </li>
+72: 
+73:     <li> <%= csb.getCreditiTot() %> </li>
+74: 
+
+
+An error occurred at line: 73 in the jsp file: /Corsi.jsp
+csb cannot be resolved
+70: 
+71:     <li> <%= csb.getNumIns() %> </li>
+72: 
+73:     <li> <%= csb.getCreditiTot() %> </li>
+74: 
+75:         <% } %>
+76: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1003)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+mag 14, 2014 6:34:53 PM org.apache.catalina.core.StandardWrapperValve invoke
+Grave: Servlet.service() for servlet [jsp] in context with path [/corsostudi] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 59 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+56: 
+57:     <ul>
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+
+
+An error occurred at line: 61 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+
+
+An error occurred at line: 63 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+
+
+An error occurred at line: 65 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+
+
+An error occurred at line: 67 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+
+
+An error occurred at line: 69 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+
+
+An error occurred at line: 71 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+73:     <li> <%= iddidb.getCreditiTot() %> </li>
+74: 
+
+
+An error occurred at line: 73 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+73:     <li> <%= iddidb.getCreditiTot() %> </li>
+74: 
+75:         <% } %>
+76: 
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 59 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+56: 
+57:     <ul>
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+
+
+An error occurred at line: 61 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+
+
+An error occurred at line: 63 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+
+
+An error occurred at line: 65 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+
+
+An error occurred at line: 67 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+
+
+An error occurred at line: 69 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+
+
+An error occurred at line: 71 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+73:     <li> <%= iddidb.getCreditiTot() %> </li>
+74: 
+
+
+An error occurred at line: 73 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+73:     <li> <%= iddidb.getCreditiTot() %> </li>
+74: 
+75:         <% } %>
+76: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1003)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+mag 14, 2014 6:35:25 PM org.apache.catalina.core.StandardWrapperValve invoke
+Grave: Servlet.service() for servlet [jsp] in context with path [/corsostudi] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 59 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+56: 
+57:     <ul>
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+
+
+An error occurred at line: 61 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+
+
+An error occurred at line: 63 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+
+
+An error occurred at line: 65 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+
+
+An error occurred at line: 67 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+
+
+An error occurred at line: 69 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+
+
+An error occurred at line: 71 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+73:     <li> <%= iddidb.getCreditiTot() %> </li>
+74: 
+
+
+An error occurred at line: 73 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+73:     <li> <%= iddidb.getCreditiTot() %> </li>
+74: 
+75:         <% } %>
+76: 
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 59 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+56: 
+57:     <ul>
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+
+
+An error occurred at line: 61 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+
+
+An error occurred at line: 63 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+
+
+An error occurred at line: 65 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+
+
+An error occurred at line: 67 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+
+
+An error occurred at line: 69 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+
+
+An error occurred at line: 71 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+73:     <li> <%= iddidb.getCreditiTot() %> </li>
+74: 
+
+
+An error occurred at line: 73 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+73:     <li> <%= iddidb.getCreditiTot() %> </li>
+74: 
+75:         <% } %>
+76: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1003)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+mag 14, 2014 6:35:26 PM org.apache.catalina.core.StandardWrapperValve invoke
+Grave: Servlet.service() for servlet [jsp] in context with path [/corsostudi] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.Corsi_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.Corsi_jsp
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:139)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1003)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+mag 14, 2014 6:35:27 PM org.apache.catalina.core.StandardWrapperValve invoke
+Grave: Servlet.service() for servlet [jsp] in context with path [/corsostudi] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.Corsi_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.Corsi_jsp
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:139)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1003)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+mag 14, 2014 6:35:32 PM org.apache.catalina.core.StandardWrapperValve invoke
+Grave: Servlet.service() for servlet [jsp] in context with path [/corsostudi] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 59 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+56: 
+57:     <ul>
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+
+
+An error occurred at line: 61 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+
+
+An error occurred at line: 63 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+
+
+An error occurred at line: 65 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+
+
+An error occurred at line: 67 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+
+
+An error occurred at line: 69 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+
+
+An error occurred at line: 71 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+73:     <li> <%= iddidb.getCreditiTot() %> </li>
+74: 
+
+
+An error occurred at line: 73 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+73:     <li> <%= iddidb.getCreditiTot() %> </li>
+74: 
+75:         <% } %>
+76: 
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 59 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+56: 
+57:     <ul>
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+
+
+An error occurred at line: 61 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+58: 
+59:     <li> <%= iddidb.getNomeDip() %> </li>
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+
+
+An error occurred at line: 63 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+60: 
+61:     <li> <%= iddidb.getCodice() %> </li> 
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+
+
+An error occurred at line: 65 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+62: 
+63:     <li> <%= iddidb.getNomeCorso() %> </li> 
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+
+
+An error occurred at line: 67 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+64:     
+65:     <li> <%= iddidb.getDurata() %> </li>
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+
+
+An error occurred at line: 69 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+66: 
+67:     <li> <%= iddidb.getSede() %> </li>
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+
+
+An error occurred at line: 71 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+68: 
+69:     <li> <%= iddidb.getInformativa() %> </li>
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+73:     <li> <%= iddidb.getCreditiTot() %> </li>
+74: 
+
+
+An error occurred at line: 73 in the jsp file: /Corsi.jsp
+The local variable iddidb may not have been initialized
+70: 
+71:     <li> <%= iddidb.getNumIns() %> </li>
+72: 
+73:     <li> <%= iddidb.getCreditiTot() %> </li>
+74: 
+75:         <% } %>
+76: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1003)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+

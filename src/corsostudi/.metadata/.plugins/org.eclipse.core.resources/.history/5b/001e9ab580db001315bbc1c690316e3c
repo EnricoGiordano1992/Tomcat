@@ -1,0 +1,12 @@
+package did;
+
+public class IdDidBean {
+
+	private String Codice;
+	private String NomeCorso;
+	private String Durata;
+	private String Sede;
+	private String Informativa;
+	private int numIns;
+  
+}

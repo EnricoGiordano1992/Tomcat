@@ -22,40 +22,49 @@ public class DBMS {
 
 	//definizione delle Query 
 	//Recupera le principali info su tutti i corsi di studi
-	private String css = "SELECT id, Codice, Nome FROM corsostudi ORDER BY Nome";
+	private String css = "SELECT id, Codice, Nome From corsostudi ORDER BY Nome";
 	//Recupera tutte le informazioni di un particolare corso di studi
 	private String cs = "SELECT distinct corsostudi.id,corsostudi.nome,codice,abbreviazione,durataanni,sede,corsostudi.informativa, dipart.nome AS dipart " +
-						"FROM corsostudi, dipart, corsoindipart " +
+						"From corsostudi, dipart, corsoindipart " +
 						"WHERE corsostudi.id=? " +
 						"AND corsostudi.id = corsoindipart.id_corsostudi " +
 						"AND dipart.id = corsoindipart.id_dipart";
 	
 	//Recupera la/e facoltà di un particolare corso di studi
-	private String csf = "SELECT DISTINCT f.nome FROM (facolta f INNER JOIN corsoinfacolta csf ON f.id=csf.id_facolta) WHERE csf.id_corsostudi=?";
+	private String csf = "SELECT DISTINCT f.nome From (facolta f INNER JOIN corsoinfacolta csf ON f.id=csf.id_facolta) WHERE csf.id_corsostudi=?";
 
 	
 	
 	//esercizio 2
 	private String css2 = "SELECT corsostudi.id, Codice, corsostudi.nome, dipart.nome Dipartimento " +
-							"FROM corsostudi, corsoindipart, dipart " +
+							"From corsostudi, corsoindipart, dipart " +
 							"WHERE dipart.id = corsoindipart.id_dipart " +
 								"AND corsostudi.id = corsoindipart.id_corsostudi ";
 
 
 	
 	private String anni = "SELECT distinct annoaccademico " +
-							"FROM corsostudi, inserogato " +
+							"From corsostudi, inserogato " +
 							"WHERE inserogato.id_corsostudi = corsostudi.id " +
 							"AND corsostudi.id=?";
 	
 	
 	private String tuttoins = "SELECT nomeins, codiceins, crediti, discriminantemodulo, nomemodulo, nomeunita " +
-								"FROM inserogato, insegn, corsostudi " +
+								"From inserogato, insegn, corsostudi " +
 								"WHERE inserogato.id_insegn = insegn.id " +
 									"AND corsostudi.id = inserogato.id_corsostudi " +
 									"AND corsostudi.id =? " +
 									"AND annoaccademico =?"
 									+ "ORDER BY nomeins";
+
+
+    private String idDidEsercizio = "select dipart.nome dipartimento, codiceins, nomeins, durataanni, sede, corsostudi.informativa, count(inserogato.id) numIns, count(inserogato.id) CreditiTot " +
+"from inserogato, corsostudi, insegn, dipart " +
+"where inserogato.id_corsostudi = corsostudi.id " +
+"and insegn.id = inserogato.id_insegn " +
+"and dipart.id =? " +
+"and inserogato.id_dipart = dipart.id "+
+"group by dipartimento, codiceins, nomeins, durataanni, sede, corsostudi.informativa";
 	
     /**
      * Costruttore della classe. Carica i driver da utilizzare per la
@@ -68,6 +77,78 @@ public class DBMS {
 		Class.forName(driver);
     }
 
+/*****************************************************************************************/
+    /*****************************************************************************************/
+    /*****************************************************************************************/
+    /*****************************************************************************************/
+    /******
+     * 
+     * E
+     * S
+     * E
+     * R
+     * C
+     * T
+     * 
+     * 8
+     */
+    
+	private IdDidBean makeIdDid(ResultSet rs) throws SQLException {
+		IdDidBean bean = new IdDidBean();
+		bean.setNomeDip(rs.getString("dipartimento"));
+		bean.setCodice(rs.getString("codiceins"));
+		bean.setNomeCorso(rs.getString("nomeins"));
+		bean.setDurata(rs.getString("durataanni"));
+		bean.setSede(rs.getString("sede"));
+		bean.setInformativa(rs.getString("informativa"));
+		bean.setNumIns(rs.getInt("numIns"));
+		bean.setCreditiTot(rs.getInt("CreditiTot"));
+		return bean;
+    }
+	
+	
+	
+	
+	public Vector getIdDid(int idDipart) {
+		// Dichiarazione delle variabili necessarie
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		Vector result = new Vector();	
+		try {
+			// Tentativo di connessione al database
+			con = DriverManager.getConnection(url, user, passwd);
+			// Connessione riuscita, ottengo l'oggetto per l'esecuzione dell'interrogazione.
+			pstmt = con.prepareStatement(idDidEsercizio); 
+			pstmt.clearParameters();
+			//Imposto i parametri della query
+			pstmt.setInt(1, idDipart); 
+			//Eseguo la query
+			rs=pstmt.executeQuery(); 
+			// Memorizzo il risultato dell'interrogazione in Vector di Bean
+			while(rs.next())
+				result.add(makeIdDid(rs));
+		} catch(SQLException sqle) {                /* Catturo le eventuali eccezioni! */
+			sqle.printStackTrace();
+		} finally {                                 /* Alla fine chiudo la connessione. */
+			try {
+				con.close();
+			} catch(SQLException sqle1) {
+				sqle1.printStackTrace();
+			}
+		}
+		return result;
+    }
+
+
+	/*****************************************************************************************/
+	/*****************************************************************************************/
+	/*****************************************************************************************/
+	/*****************************************************************************************/
+	/*****************************************************************************************/
+
+	
+	
 	//Metodi per la creazione di un bean a partire dal record attuale del ResultSet dato come parametro
 	private CorsoStudiBean makeCorsoStudiBean(ResultSet rs) throws SQLException {
 		CorsoStudiBean bean = new CorsoStudiBean();
@@ -103,12 +184,12 @@ public class DBMS {
 	//esercizio 3
 	private InsErogatoBean makeInsErogatoBean(ResultSet rs) throws SQLException {
 		InsErogatoBean bean = new InsErogatoBean();
-		bean.setNomeFROMInsegn(rs.getString("nomeins"));
-		bean.setCodiceFROMInsegn(rs.getString("codiceins"));
-		bean.setCreditiFROMInsErogato(rs.getString("crediti"));
-		bean.setDiscFROMInsErogato(rs.getString("discriminantemodulo"));
-		bean.setNomeModuloFROMInsErogato(rs.getString("nomemodulo"));
-		bean.setNomeUnitaFROMInsErogato(rs.getString("nomeunita"));
+		bean.setNomeFromInsegn(rs.getString("nomeins"));
+		bean.setCodiceFromInsegn(rs.getString("codiceins"));
+		bean.setCreditiFromInsErogato(rs.getString("crediti"));
+		bean.setDiscFromInsErogato(rs.getString("discriminantemodulo"));
+		bean.setNomeModuloFromInsErogato(rs.getString("nomemodulo"));
+		bean.setNomeUnitaFromInsErogato(rs.getString("nomeunita"));
 		return bean;
     }
 	

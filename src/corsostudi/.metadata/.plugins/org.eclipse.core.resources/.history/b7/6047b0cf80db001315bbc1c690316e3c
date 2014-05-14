@@ -1,0 +1,26 @@
+package did;
+
+public class IdDidBean {
+
+	private String Codice;
+	private String NomeCorso;
+	private String Durata;
+	private String Sede;
+	private String Informativa;
+	private int NumIns;
+	private int CreditiTot;
+
+	public IdDidBean() {
+		Codice = null;
+		NomeCorso = null;
+		Durata = null;
+		Sede = null;
+		Informativa = null;
+		NumIns = null;
+		CreditiTot = null;
+	}
+  
+	
+	
+	
+}

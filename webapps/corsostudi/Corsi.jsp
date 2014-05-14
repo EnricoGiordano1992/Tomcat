@@ -42,28 +42,44 @@
 	    // ------------------------------------------------------------------------- %>
 
 <% 
-            Vector css = dbms.getCorsoStudi(Integer.parseInt(idDip));
-            CorsoStudiBean csb =(CorsoStudiBean) css.get(0);
+            Vector iddid = dbms.getIdDid(Integer.parseInt(idDip)); %>
+
+            <%= iddid.size() %>
+<%
+            IdDidBean iddidb;
 %>
 
 <title>Corsi di Studio Esistenti</title>
 
 <body>
-<h1>Corsi di Studio Esistenti:</h1>
-<table borderspace=10>
-<tr><th>Codice</th><th>Nome</th><th>Dipartimento</th></tr>
-<tr><td> 
-    <%= csb.getNomeCorsoStudi() %> 
+<h1>Corsi di studio attivi gestiti dal dipartimento</h1>
 
-    </td><td> 
+<% for (int i = 0; i < iddid.size(); i++)
+{
+     iddidb = (IdDidBean) iddid.get(i); 
+%>
 
-    <%= csb.getDipartimento() %> 
+    <ul>
+
+    <li> <%= iddidb.getNomeDip() %> </li>
+
+    <li> <%= iddidb.getCodice() %> </li> 
+
+    <li> <%= iddidb.getNomeCorso() %> </li> 
     
-    </td></tr>					
+    <li> <%= iddidb.getDurata() %> </li>
 
-        <% } %>
+    <li> <%= iddidb.getSede() %> </li>
 
-</table>
+    <li> <%= iddidb.getInformativa() %> </li>
+
+    <li> <%= iddidb.getNumIns() %> </li>
+
+    <li> <%= iddidb.getCreditiTot() %> </li>
+
+    </ul>
+        <% }} %>
+
 
 <a href="Corsi.jsp"><font color="00AA00">Back</font></a>
 
