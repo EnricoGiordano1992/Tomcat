@@ -1,0 +1,6 @@
+<servlet>
+    <servlet-name>HelloWWW</servlet-name>
+    <servlet-class>ServletHelloWWW</servlet-class>
+</servlet>
+
+<servlet-mapping><servlet-name>HelloWWW</servlet-name><url-pattern>/servlet/HelloWWW</url-pattern></servlet-mapping>

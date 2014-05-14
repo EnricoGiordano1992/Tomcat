@@ -1,0 +1,147 @@
+
+package did;
+
+public class InsErogatoBean {
+
+    private int id;
+
+    private String nomeFromInsegn;
+    private String codiceFromInsegn;
+
+    private String annoaccFromInsErogato;
+    private String nomeFromInsErogato;
+    private String DiscFromInsErogato;
+    private String nomeUnitaFromInsErogato;
+    private String creditiFromInsErogato;
+    private String HaModuliFromInsErogato;
+    private String HaUnitaFromInsErogato;
+    private String MutuatoFromInsErogato;
+    private String NomeModuloFromInsErogato;
+    
+    private String DescrFromDiscriminante;
+
+	public InsErogatoBean() {
+		this.id = 2;
+		this.nomeFromInsegn = null;
+		this.codiceFromInsegn = null;
+		this.annoaccFromInsErogato = null;
+		this.nomeFromInsErogato = null;
+		this.DiscFromInsErogato = null;
+		this.nomeUnitaFromInsErogato = null;
+		this.creditiFromInsErogato = null;
+		this.HaModuliFromInsErogato = null;
+		this.HaUnitaFromInsErogato = null;
+		this.MutuatoFromInsErogato = null;
+		this.DescrFromDiscriminante = null;
+		this.NomeModuloFromInsErogato = null;
+	}
+
+	public String getNomeModuloFromInsErogato() {
+		return NomeModuloFromInsErogato;
+	}
+
+	public void setNomeModuloFromInsErogato(String nomeModuloFromInsErogato) {
+		NomeModuloFromInsErogato = nomeModuloFromInsErogato;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNomeFromInsegn() {
+		return nomeFromInsegn;
+	}
+
+	public void setNomeFromInsegn(String nomeFromInsegn) {
+		this.nomeFromInsegn = nomeFromInsegn;
+	}
+
+	public String getCodiceFromInsegn() {
+		return codiceFromInsegn;
+	}
+
+	public void setCodiceFromInsegn(String codiceFromInsegn) {
+		this.codiceFromInsegn = codiceFromInsegn;
+	}
+
+	public String getAnnoaccFromInsErogato() {
+		return annoaccFromInsErogato;
+	}
+
+	public void setAnnoaccFromInsErogato(String annoaccFromInsErogato) {
+		this.annoaccFromInsErogato = annoaccFromInsErogato;
+	}
+
+	public String getNomeFromInsErogato() {
+		return nomeFromInsErogato;
+	}
+
+	public void setNomeFromInsErogato(String nomeFromInsErogato) {
+		this.nomeFromInsErogato = nomeFromInsErogato;
+	}
+
+	public String getDiscFromInsErogato() {
+		return DiscFromInsErogato;
+	}
+
+	public void setDiscFromInsErogato(String discFromInsErogato) {
+		DiscFromInsErogato = discFromInsErogato;
+	}
+
+	public String getNomeUnitaFromInsErogato() {
+		return nomeUnitaFromInsErogato;
+	}
+
+	public void setNomeUnitaFromInsErogato(String nomeUnitaFromInsErogato) {
+		this.nomeUnitaFromInsErogato = nomeUnitaFromInsErogato;
+	}
+
+	public String getCreditiFromInsErogato() {
+		return creditiFromInsErogato;
+	}
+
+	public void setCreditiFromInsErogato(String creditiFromInsErogato) {
+		this.creditiFromInsErogato = creditiFromInsErogato;
+	}
+
+	public String getHaModuliFromInsErogato() {
+		return HaModuliFromInsErogato;
+	}
+
+	public void setHaModuliFromInsErogato(String haModuliFromInsErogato) {
+		HaModuliFromInsErogato = haModuliFromInsErogato;
+	}
+
+	public String getHaUnitaFromInsErogato() {
+		return HaUnitaFromInsErogato;
+	}
+
+	public void setHaUnitaFromInsErogato(String haUnitaFromInsErogato) {
+		HaUnitaFromInsErogato = haUnitaFromInsErogato;
+	}
+
+	public String getMutuatoFromInsErogato() {
+		return MutuatoFromInsErogato;
+	}
+
+	public void setMutuatoFromInsErogato(String mutuatoFromInsErogato) {
+		MutuatoFromInsErogato = mutuatoFromInsErogato;
+	}
+
+	public String getDescrFromDiscriminante() {
+		return DescrFromDiscriminante;
+	}
+
+	public void setDescrFromDiscriminante(String descrFromDiscriminante) {
+		DescrFromDiscriminante = descrFromDiscriminante;
+	}
+
+	
+	
+    
+ 
+}

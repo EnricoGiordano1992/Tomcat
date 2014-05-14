@@ -1,0 +1,40 @@
+mag 06, 2014 8:44:19 AM org.apache.catalina.core.AprLifecycleListener init
+Informazioni: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+mag 06, 2014 8:44:20 AM org.apache.tomcat.util.digester.SetPropertiesRule begin
+Avvertenza: [SetPropertiesRule]{Server/Service/Engine/Host} Setting property 'xmlValidation' to 'false' did not find a matching property.
+mag 06, 2014 8:44:20 AM org.apache.tomcat.util.digester.SetPropertiesRule begin
+Avvertenza: [SetPropertiesRule]{Server/Service/Engine/Host} Setting property 'xmlNamespaceAware' to 'false' did not find a matching property.
+mag 06, 2014 8:44:21 AM org.apache.coyote.AbstractProtocol init
+Informazioni: Initializing ProtocolHandler ["http-bio-8080"]
+mag 06, 2014 8:44:21 AM org.apache.coyote.AbstractProtocol init
+Informazioni: Initializing ProtocolHandler ["ajp-bio-8009"]
+mag 06, 2014 8:44:21 AM org.apache.catalina.startup.Catalina load
+Informazioni: Initialization processed in 4888 ms
+mag 06, 2014 8:44:22 AM org.apache.catalina.core.StandardService startInternal
+Informazioni: Starting service Catalina
+mag 06, 2014 8:44:22 AM org.apache.catalina.core.StandardEngine startInternal
+Informazioni: Starting Servlet Engine: Apache Tomcat/7.0.30
+mag 06, 2014 8:44:22 AM org.apache.catalina.startup.HostConfig deployDirectory
+Informazioni: Deploying web application directory /home/accounts/studenti/id224zzf/tomcat/webapps/corsostudi
+mag 06, 2014 8:44:22 AM org.apache.catalina.startup.SetContextPropertiesRule begin
+Avvertenza: [SetContextPropertiesRule]{Context} Setting property 'isInvokerEnabled' to 'true' did not find a matching property.
+mag 06, 2014 8:44:26 AM org.apache.catalina.util.SessionIdGenerator createSecureRandom
+Informazioni: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [198] milliseconds.
+mag 06, 2014 8:44:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+Informazioni: Deploying web application directory /home/accounts/studenti/id224zzf/tomcat/webapps/hello
+mag 06, 2014 8:44:27 AM org.apache.catalina.startup.SetContextPropertiesRule begin
+Avvertenza: [SetContextPropertiesRule]{Context} Setting property 'isInvokerEnabled' to 'true' did not find a matching property.
+mag 06, 2014 8:44:28 AM org.apache.catalina.startup.HostConfig deployDirectory
+Informazioni: Deploying web application directory /home/accounts/studenti/id224zzf/tomcat/webapps/ROOT
+mag 06, 2014 8:44:28 AM org.apache.catalina.startup.SetContextPropertiesRule begin
+Avvertenza: [SetContextPropertiesRule]{Context} Setting property 'isInvokerEnabled' to 'true' did not find a matching property.
+mag 06, 2014 8:44:28 AM org.apache.coyote.AbstractProtocol start
+Informazioni: Starting ProtocolHandler ["http-bio-8080"]
+mag 06, 2014 8:44:28 AM org.apache.coyote.AbstractProtocol start
+Informazioni: Starting ProtocolHandler ["ajp-bio-8009"]
+mag 06, 2014 8:44:28 AM org.apache.catalina.startup.Catalina start
+Informazioni: Server startup in 6893 ms
+mag 06, 2014 8:44:46 AM org.apache.catalina.core.StandardServer await
+Informazioni: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+mag 06, 2014 8:44:46 AM org.apache.coyote.AbstractProtocol pause
+Informazioni: Pausing ProtocolHandler ["http-bio-8080"]

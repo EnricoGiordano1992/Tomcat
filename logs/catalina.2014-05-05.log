@@ -1,0 +1,52 @@
+mag 05, 2014 3:03:41 PM org.apache.catalina.core.AprLifecycleListener init
+Informazioni: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+mag 05, 2014 3:03:41 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+Avvertenza: [SetPropertiesRule]{Server/Service/Engine/Host} Setting property 'xmlValidation' to 'false' did not find a matching property.
+mag 05, 2014 3:03:41 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+Avvertenza: [SetPropertiesRule]{Server/Service/Engine/Host} Setting property 'xmlNamespaceAware' to 'false' did not find a matching property.
+mag 05, 2014 3:03:42 PM org.apache.coyote.AbstractProtocol init
+Informazioni: Initializing ProtocolHandler ["http-bio-8080"]
+mag 05, 2014 3:03:42 PM org.apache.coyote.AbstractProtocol init
+Informazioni: Initializing ProtocolHandler ["ajp-bio-8009"]
+mag 05, 2014 3:03:42 PM org.apache.catalina.startup.Catalina load
+Informazioni: Initialization processed in 1462 ms
+mag 05, 2014 3:03:42 PM org.apache.catalina.core.StandardService startInternal
+Informazioni: Starting service Catalina
+mag 05, 2014 3:03:42 PM org.apache.catalina.core.StandardEngine startInternal
+Informazioni: Starting Servlet Engine: Apache Tomcat/7.0.30
+mag 05, 2014 3:03:42 PM org.apache.catalina.startup.HostConfig deployDirectory
+Informazioni: Deploying web application directory /home/accounts/studenti/id224zzf/tomcat/webapps/corsostudi
+mag 05, 2014 3:03:42 PM org.apache.catalina.startup.SetContextPropertiesRule begin
+Avvertenza: [SetContextPropertiesRule]{Context} Setting property 'isInvokerEnabled' to 'true' did not find a matching property.
+mag 05, 2014 3:03:43 PM org.apache.catalina.startup.HostConfig deployDirectory
+Informazioni: Deploying web application directory /home/accounts/studenti/id224zzf/tomcat/webapps/hello
+mag 05, 2014 3:03:43 PM org.apache.catalina.startup.SetContextPropertiesRule begin
+Avvertenza: [SetContextPropertiesRule]{Context} Setting property 'isInvokerEnabled' to 'true' did not find a matching property.
+mag 05, 2014 3:03:44 PM org.apache.catalina.startup.HostConfig deployDirectory
+Informazioni: Deploying web application directory /home/accounts/studenti/id224zzf/tomcat/webapps/ROOT
+mag 05, 2014 3:03:44 PM org.apache.catalina.startup.SetContextPropertiesRule begin
+Avvertenza: [SetContextPropertiesRule]{Context} Setting property 'isInvokerEnabled' to 'true' did not find a matching property.
+mag 05, 2014 3:03:45 PM org.apache.coyote.AbstractProtocol start
+Informazioni: Starting ProtocolHandler ["http-bio-8080"]
+mag 05, 2014 3:03:45 PM org.apache.coyote.AbstractProtocol start
+Informazioni: Starting ProtocolHandler ["ajp-bio-8009"]
+mag 05, 2014 3:03:45 PM org.apache.catalina.startup.Catalina start
+Informazioni: Server startup in 3014 ms
+mag 05, 2014 3:04:55 PM org.apache.catalina.core.StandardContext reload
+Informazioni: Reloading Context with name [/corsostudi] has started
+mag 05, 2014 3:04:55 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+Grave: The web application [/corsostudi] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+mag 05, 2014 3:04:55 PM org.apache.catalina.core.StandardContext reload
+Informazioni: Reloading Context with name [/corsostudi] is completed
+mag 05, 2014 3:33:15 PM org.apache.catalina.core.StandardServer await
+Informazioni: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+mag 05, 2014 3:33:15 PM org.apache.coyote.AbstractProtocol pause
+Informazioni: Pausing ProtocolHandler ["http-bio-8080"]
+mag 05, 2014 3:33:15 PM org.apache.coyote.AbstractProtocol pause
+Informazioni: Pausing ProtocolHandler ["ajp-bio-8009"]
+mag 05, 2014 3:33:16 PM org.apache.catalina.core.StandardService stopInternal
+Informazioni: Stopping service Catalina
+mag 05, 2014 3:33:16 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+Grave: The web application [/corsostudi] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+mag 05, 2014 3:33:16 PM org.apache.coyote.AbstractProtocol stop
+Informazioni: Stopping ProtocolHandler ["http-bio-8080"]

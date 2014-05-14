@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;did.DBMS.getAnnoAccademico(...)&apos; to &apos;getAAErogazioni&apos;&#x0A;- Original project: &apos;corsostudi&apos;&#x0A;- Original element: &apos;did.DBMS.getAnnoAccademico(...)&apos;&#x0A;- Renamed element: &apos;did.DBMS.getAAErogazioni(...)&apos;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;getAnnoAccademico&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/&lt;did{DBMS.java[DBMS~getAnnoAccademico~I" name="getAAErogazioni" references="true" stamp="1398848229063" version="1.0"/>
+</session>

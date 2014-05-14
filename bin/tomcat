@@ -1,0 +1,39 @@
+#!/bin/bash
+
+#
+# Autore: Manganotto Filippo
+# Ultima modifica: 18/02/2005 by Gabriele Pozzani
+# Ultima modifica: 24/02/2014 by Matteo Zavatteri (tomcat7!)
+#
+# Questo script permette di avviare e fermare l'esecuzione del server tomcat.
+# Nel caso di stop esegue un kill dei processi Java (tutti quelli in esecuzione!!!!!)
+#
+
+TOMCAT_BIN=/usr/share/tomcat7/bin
+
+echo $1;
+
+if [ "$1" == "start" ]; then
+   # Lancio il server
+   $TOMCAT_BIN/startup.sh -f `dirname $0`/../conf/server.xml
+elif [ "$1" == "stop" ]; then
+   # Fermo l'esecuzione del server
+   $TOMCAT_BIN/shutdown.sh
+   killall -9 java
+elif [ "$1" == "restart" ]; then
+   echo "Stopping the server..."
+   # Fermo l'esecuzione del server
+   $TOMCAT_BIN/shutdown.sh
+   sleep 2
+   echo "Restarting the server..."
+   # Rilancio il server
+   $TOMCAT_BIN/startup.sh -f `dirname $0`/../conf/server.xml
+else
+   # Help di utilizzo
+   echo "Usage: tomcat <start|stop>";
+   echo "";
+   echo "  start: lancia il server tomcat";
+   echo "  stop: ferma il server tomcat";
+   echo "";
+   exit;
+fi

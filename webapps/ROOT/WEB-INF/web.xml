@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Copyright 2004 The Apache Software Foundation
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+   version="2.5">
+
+  <display-name>Welcome to Tomcat</display-name>
+  <description>
+     ROOT Context
+  </description>
+
+<!-- JSPC servlet mappings start -->
+
+
+    <servlet>
+        <servlet-name>ServletHelloWWW</servlet-name>
+        <servlet-class>ServletHelloWWW</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletHelloWWW</servlet-name>
+        <url-pattern>/servlet/ServletHelloWWW</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletHelloWWW2</servlet-name>
+        <servlet-class>ServletHelloWWW2</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletHelloWWW2</servlet-name>
+        <url-pattern>/servlet/ServletHelloWWW2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletLire</servlet-name>
+        <servlet-class>ServletLire</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletLire</servlet-name>
+        <url-pattern>/servlet/ServletLire</url-pattern>
+    </servlet-mapping>
+
+<!-- JSPC servlet mappings end -->
+
+</web-app>

@@ -1,0 +1,3 @@
+javac  -classpath /usr/share/tomcat7/lib/servlet-api.jar *.java;
+cp *.class ../../webapps/ROOT/
+rm *.class

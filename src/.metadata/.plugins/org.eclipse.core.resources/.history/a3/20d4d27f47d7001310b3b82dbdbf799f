@@ -1,0 +1,100 @@
+import java.io.*;
+
+
+public class Final_script{
+	public static void main(String [] args){
+	int length=args.length;
+	String[] file= new String[length];
+	for(int i=0; i<length; i++)
+		file[i]=args[i];
+	
+	System.out.println("argomenti"+length);
+	/*
+    String serverIP=args[0];
+
+	InputStreamReader tastiera=new InputStreamReader(System.in);
+	BufferedReader buffer=new BufferedReader(tastiera);
+   
+		//metodo per aggiungere eventi
+		FileOutputStream f = null;
+		FileOutputStream file = null;
+		String output = "";
+		try{
+			if (new File("event/db/Eventi.txt").exists()){
+				f = new FileOutputStream("event/db/Eventi.txt",true); //apertura in append del file
+			}
+			else {
+				f = new FileOutputStream("event/db/Eventi.txt");
+			}
+			if (new File("event/db/"+NameEvent+".txt").exists()==false)
+				file = new FileOutputStream("event/db/"+NameEvent+".txt");
+			file.close();				
+			PrintStream Out = new PrintStream(f);
+			Out.println(NameEvent+"\n"+day+"\n"+number+"\n----------");
+			Out.close();
+			f.close();
+			output="\nEvento aggiunto con successo.";
+			System.out.println("Evento: " + NameEvent + " giorno: "+ day + " aggiunto con successo");
+		}
+		catch(IOException e){output="Errore di IO presso il server. "+e;}
+
+
+		System.out.println("Rimozione eventi");
+		String output= "";
+		String line1,line2,line3,line4;
+		int found = 0;
+		try{
+			BufferedReader file_reader;
+			file_reader = new BufferedReader(new FileReader("event/db/"+NameEvent+".txt"));
+			//prima riga, nome evento				
+			line1 = file_reader.readLine();
+			if (line1 == null){ //se il file e' vuoto, quindi non ci sono stati iscritti
+
+
+				BufferedReader fileevent;
+				fileevent = new BufferedReader(new FileReader("event/db/Eventi.txt"));
+				//prima riga, nome evento				
+				line1 = fileevent.readLine();
+				FileOutputStream f= new FileOutputStream("event/db/tmp");
+				PrintStream Out = new PrintStream(f);
+				while (line1 != null){ 
+					//seconda riga, giorno
+					line2 = fileevent.readLine();
+					//terza riga, posti 
+					line3 = fileevent.readLine(); 
+					//quarta riga, ---
+					line4 = fileevent.readLine();
+
+					if(((Integer.parseInt(line2)!=day))||((line1.equals(NameEvent))!=true)){
+						Out.println(line1);
+						Out.println(line2);
+						Out.println(line3);
+						Out.println(line4);
+					}
+					else
+						found=1;
+					line1 = fileevent.readLine(); 
+				}
+				fileevent.close();
+				f.close();
+				Out.close();
+				File old1 = new File("event/db/Eventi.txt");
+				File new1 = new File("event/db/tmp");
+				old1.delete();
+				new1.renameTo(old1);
+				output="Rimozione evento non effettuato: evento non trovato";
+				if(found == 1){
+					File eslist = new File("event/db/"+NameEvent+".txt");
+					eslist.delete();
+				output="Rimozione evento effettuato con successo";}
+			}
+			else
+				output="Impossibile rimuovere eventi, sono presenti utenti registrati";
+			file_reader.close();
+		}catch(IOException e){output = "Errore rimozione eventi";}
+
+		return output;*/
+	}
+	
+}
+ 

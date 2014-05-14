@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+/home/accounts/studenti/id224zzf/tomcat/src/.metadata/.plugins/org.eclipse.jdt.core
+336710136.index
+810854943.index

@@ -1,0 +1,172 @@
+import java.io.*;
+import java.sql.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+/**
+ * Questa classe gestisce le richieste riguardanti le ricerche all'interno della
+ * base di dati. Risponde solamente a richieste HTTP di tipo GET. I possibili
+ * parametri che vengono considerati e le relative azioni effettuate sono le
+ * seguenti:
+ * <br>
+ * <ol>
+ *   <li>nessun parametro: viene visualizzata la lista di tutti i corsi di studio esistenti;</li>
+ *   <li>parametro 'id': vengono visualizzate le informazioni (compresa la/le facoltà di appartenenza) 
+ *       del corso di studi con l'id specificato.</li>
+ * </ol>
+ *
+ */
+public class ServletCorsoStudi extends HttpServlet {
+
+
+    /**
+     * Questo metodo risponde alle richieste HTTP di tipo GET. Elabora le richieste collegandosi alla base di dati e producendo le pagine HTML di output.
+     *
+     * @param request Oggetto HttpServletRequest dal quale ottenere informazioni circa la
+     *                richiesta effettuata.
+     * @param response Oggetto HttpServletResponse per l'invio delle risposte.
+     */
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+	throws IOException, ServletException {
+		
+		//Dati di identificazione dell'utente
+		String user = "userlab16";
+		String passwd = "sediciLS";
+		/** URL per la connessione alla base di dati è formato dai seguenti componenti:
+		* <protocollo>://<host del server>/<nome base di dati>.
+		*/
+		String url = "jdbc:postgresql://dbserver.scienze.univr.it/did2014";
+		
+		//Dichiarazione delle query necessarie
+		//Query per il recupero delle informazioni minimali sui corsi di studio
+		String css = "SELECT id, Codice, Nome FROM corsostudi ORDER BY Nome";
+
+		//esercizio 2
+		String css2 = "SELECT id, Codice, dipart.nome Nome from corsostudi, corsoindipart, dipart where dipart.id = corsoindipart.id_dipart and corsostudi.id = corsoindipart.id_corsostudi and corsostudi.nome not ilike '%facolt%'";
+
+		
+		//Query per il recupero di tutte le informazioni riguardanti un corso di studio
+		String cs = "SELECT * FROM corsostudi WHERE id=?";
+		
+		//Query per il recupero delle facoltà di appartenenza di un dato corso di studio
+		String csf = "SELECT DISTINCT f.nome FROM (facolta f INNER JOIN corsoinfacolta csf ON f.id=csf.id_facolta) WHERE csf.id_corsostudi=?";
+		
+		//Dichiarazione delle variabili necessarie alla connessione e al recupero dei dati
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		Statement stmt = null;
+		ResultSet rs = null, rsf = null;
+		
+		
+	
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/html; charset=ISO-8859-1");
+	
+		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"");
+		out.println("      \"http://www.w3.org/TR/REC-html40/loose.dtd\">");
+		
+		//Recupero del possibile parametro d'ingresso id della servlet
+		String id = "";
+		if (request.getParameter("id") != null) {// Ottengo se presente il parametro 'id'
+			id = request.getParameter("id");
+		}
+	
+		//Caricamento del driver JDBC per il database
+		try {
+			Class.forName("org.postgresql.Driver");
+		}
+		catch (ClassNotFoundException cnfe) {
+			out.println("Driver jdbc non trovato: " + cnfe.getMessage());
+		}
+		
+		
+		try {
+			// Tentativo di connessione al database
+			con = DriverManager.getConnection(url, user, passwd);
+					
+			out.println("<html>");
+			out.println("<head>");
+			// Determino la pagina da visualizzare a seconda della presenza o meno 
+			if (id.equals("")) {      //recupero e visualizzo tutti i corsi di studio disponibili
+				stmt = con.createStatement();
+				// Eseguo l'interrogazione desiderata
+				//rs = stmt.executeQuery(css);
+				rs = stmt.executeQuery(css2);
+
+				
+				
+				//Genero la parte statica della pagina HTML risultante
+				out.println("<title>Corsi di Studio Esistenti</title>");
+				out.println("</head>");
+				out.println("<body>");
+				out.println("<h1>Corsi di Studio Esistenti:</h1>");
+				out.println("<table>");
+				out.println("<tr><th>Codice</th><th>Nome</th></tr>");			
+				
+				//Genero la parte dinamica della pagina HTML risultante
+				//recuperando le informazioni dal ResultSet
+				while (rs.next()) {  //Per ogni record del ResultSet
+					out.println("<tr><td><a href=\"ServletCorsoStudi?id="+rs.getInt("id")+"\">"
+						+rs.getString("codice") + "</a></td><td>" + rs.getString("nome") + "</td></tr>");
+				
+/*					out.println("<tr><td><a href=\"ServletCorsoStudi?id=\">" + rs.getInt("Codice")
+						+ "</a></td><td>" + rs.getString("Nome") + "</td></tr>");
+*/					}
+	
+				out.println("</table>");
+			}
+			else {  //Visualizzo le informazioni di un particolare corso di studio
+				//Carico la query per il recupero delle info su un corso di studio nel PreparedStatement
+				pstmt = con.prepareStatement(cs); 
+				pstmt.clearParameters();
+				//Imposto il parametro della query
+				pstmt.setInt(1, Integer.parseInt(id));
+				//Eseguo la query
+				rs=pstmt.executeQuery(); 
+				//Il ResultSet contiene un solo record dato che è stata effettuata un'interrogazione
+				//su una particolare chiave primaria. Quindi non devo scorrere diversi record ma devo soltanto posizionarmi sul primo e unico disponibile.
+				rs.next();
+				
+				//Carico la query per il recupero della/e facoltà del corso di studio nel 
+				//PreparedStatement
+				pstmt = con.prepareStatement(csf); 
+				pstmt.clearParameters();
+				//Imposto il parametro della query
+				pstmt.setInt(1, Integer.parseInt(id)); 
+				//Eseguo la query
+				rsf=pstmt.executeQuery(); 
+				//Utilizzando il ResultSet rs visualizzo le info sul corso di studio
+				out.println("<title>Informazioni su un Corso di Studio</title>");
+				out.println("</head>");
+				out.println("<body>");
+				out.println("<h2>Informazioni sul Corso di Studio</h2>");
+				out.println("<ul><li><b>Codice</b>: "+rs.getString("Codice")+"</li>");
+				out.println("<li><b>Nome</b>: "+rs.getString("Nome")+"</li>");
+				out.println("<li><b>Abbreviazione</b>: "+rs.getString("Abbreviazione")+"</li>");
+				out.println("<li><b>Durata anni</b>: "+rs.getInt("Durataanni")+"</li>");
+				out.println("<li><b>Sede</b>: "+rs.getString("Sede")+"</li>");
+				out.println("<li><b>Facoltà</b>: ");
+				
+				//Utilizzando il ResultSet rsf visualizzo la/e facoltà di appartenenza
+				while (rsf.next()) {
+					out.println(rsf.getString("Nome")+", ");
+				}
+				
+				out.println("</li>");				
+				
+				out.println("<li><b>Informativa</b>: "+rs.getString("Informativa")+"</li></ul>");
+				
+				out.println("<a href=\"ServletCorsoStudi\"><font color=\"00AA00\"><< Back</font></a>");
+			}
+			
+			//Termino la pagina HTML
+			out.println("</body>");
+			out.println("</html>");
+			
+			//Chiudo la connessione
+			con.close();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
+}
