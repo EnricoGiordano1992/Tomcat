@@ -58,13 +58,42 @@ public class DBMS {
 									+ "ORDER BY nomeins";
 
 
-    private String idDidEsercizio = "select dipart.nome dipartimento, codiceins, nomeins, durataanni, sede, corsostudi.informativa, count(inserogato.id) numIns, count(inserogato.id) CreditiTot " +
+    private String idDidEsercizio = "(select * from " +
+"(select distinct dipart.nome dipartimento, corsostudi.codice cod, corsostudi.nome nomecorso, durataanni, sede, corsostudi.informativa, " +
+"sum(inserogato.crediti) CreditiTot, " +
+"id_tipocs " +
+
+
 "from inserogato, corsostudi, insegn, dipart " +
 "where inserogato.id_corsostudi = corsostudi.id " +
 "and insegn.id = inserogato.id_insegn " +
 "and dipart.id =? " +
-"and inserogato.id_dipart = dipart.id and inserogato.annoaccademico like '2013/2014'"+
-"group by dipartimento, codiceins, nomeins, durataanni, sede, corsostudi.informativa";
+"and inserogato.id_dipart = dipart.id " +
+"and inserogato.annoaccademico = '2013/2014' "+
+"and id_tipocs in (5,14,20,25,23) " +
+"and modulo = 0 " +
+"group by dipartimento, cod, nomecorso, durataanni, sede, corsostudi.informativa, id_tipocs " +
+") as tab1 "+
+
+"JOIN "+
+
+"(select count(*) numIns, corsostudi.nome nomecorso from inserogato, corsostudi where inserogato.id_corsostudi = corsostudi.id and annoaccademico ='2013/2014' group by corsostudi.nome) as tab2 on tab1.nomecorso = tab2.nomecorso  )  " +
+
+"UNION " +
+
+"(select distinct dipart.nome dipartimento, corsostudi.codice cod, corsostudi.nome nomecorso, durataanni, sede, corsostudi.informativa, count(id_corsostudi) CreditiTot, id_tipocs, count(*) numIns, corsostudi.nome nomecorso " +
+"from corsostudi, dipart, corsoindipart " +
+"where corsoindipart.id_dipart = dipart.id and corsoindipart.id_corsostudi = corsostudi.id " +
+"and id_tipocs in (5,14,20,25,23) " +
+"and dipart.id =? " +
+"group by dipartimento, cod, nomecorso, durataanni, sede, corsostudi.informativa, id_tipocs) " +
+"" +
+
+"";
+
+//5, 20 = laurea
+//14 = dottorato
+//25,23 = magistrale
 	
     /**
      * Costruttore della classe. Carica i driver da utilizzare per la
@@ -96,13 +125,15 @@ public class DBMS {
 	private IdDidBean makeIdDid(ResultSet rs) throws SQLException {
 		IdDidBean bean = new IdDidBean();
 		bean.setNomeDip(rs.getString("dipartimento"));
-		bean.setCodice(rs.getString("codiceins"));
-		bean.setNomeCorso(rs.getString("nomeins"));
+		bean.setCodice(rs.getString("cod"));
+		bean.setNomeCorso(rs.getString("nomecorso"));
 		bean.setDurata(rs.getString("durataanni"));
 		bean.setSede(rs.getString("sede"));
 		bean.setInformativa(rs.getString("informativa"));
 		bean.setNumIns(rs.getInt("numIns"));
 		bean.setCreditiTot(rs.getInt("CreditiTot"));
+        bean.setId_tipocs(rs.getInt("id_tipocs"));
+
 		return bean;
     }
 	
@@ -122,7 +153,8 @@ public class DBMS {
 			pstmt = con.prepareStatement(idDidEsercizio); 
 			pstmt.clearParameters();
 			//Imposto i parametri della query
-			pstmt.setInt(1, idDipart); 
+			pstmt.setInt(1, idDipart);
+            pstmt.setInt(2, idDipart); 
 			//Eseguo la query
 			rs=pstmt.executeQuery(); 
 			// Memorizzo il risultato dell'interrogazione in Vector di Bean

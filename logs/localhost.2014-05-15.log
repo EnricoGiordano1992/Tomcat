@@ -1,0 +1,364 @@
+mag 15, 2014 3:06:49 PM org.apache.catalina.core.StandardWrapperValve invoke
+Grave: Servlet.service() for servlet [jsp] in context with path [/corsostudi] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 62 in the jsp file: /Corsi.jsp
+iddidb.getId_tipocs cannot be resolved or is not a field
+59:      iddidb = (IdDidBean) iddid.get(i); 
+60: 
+61:     //cerco le lauree
+62:     if(iddidb.getId_tipocs == 5 || iddidb.getId_tipocs == 20 ) {    
+63: %>
+64: 
+65:     
+
+
+An error occurred at line: 62 in the jsp file: /Corsi.jsp
+iddidb.getId_tipocs cannot be resolved or is not a field
+59:      iddidb = (IdDidBean) iddid.get(i); 
+60: 
+61:     //cerco le lauree
+62:     if(iddidb.getId_tipocs == 5 || iddidb.getId_tipocs == 20 ) {    
+63: %>
+64: 
+65:     
+
+
+An error occurred at line: 94 in the jsp file: /Corsi.jsp
+iddidb.getId_tipocs cannot be resolved or is not a field
+91:     iddidb = (IdDidBean) iddid.get(i);
+92: 
+93:     //cerco le lauree magistrali     
+94:     if(iddidb.getId_tipocs == 25 || iddidb.getId_tipocs == 23 ) {
+95: %>
+96: 
+97:     
+
+
+An error occurred at line: 94 in the jsp file: /Corsi.jsp
+iddidb.getId_tipocs cannot be resolved or is not a field
+91:     iddidb = (IdDidBean) iddid.get(i);
+92: 
+93:     //cerco le lauree magistrali     
+94:     if(iddidb.getId_tipocs == 25 || iddidb.getId_tipocs == 23 ) {
+95: %>
+96: 
+97:     
+
+
+An error occurred at line: 127 in the jsp file: /Corsi.jsp
+iddidb.getId_tipocs cannot be resolved or is not a field
+124:      iddidb = (IdDidBean) iddid.get(i); 
+125: 
+126:     //cerco i dottorati
+127:     if(iddidb.getId_tipocs == 14 ) {     
+128: %>
+129: 
+130:     
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 62 in the jsp file: /Corsi.jsp
+iddidb.getId_tipocs cannot be resolved or is not a field
+59:      iddidb = (IdDidBean) iddid.get(i); 
+60: 
+61:     //cerco le lauree
+62:     if(iddidb.getId_tipocs == 5 || iddidb.getId_tipocs == 20 ) {    
+63: %>
+64: 
+65:     
+
+
+An error occurred at line: 62 in the jsp file: /Corsi.jsp
+iddidb.getId_tipocs cannot be resolved or is not a field
+59:      iddidb = (IdDidBean) iddid.get(i); 
+60: 
+61:     //cerco le lauree
+62:     if(iddidb.getId_tipocs == 5 || iddidb.getId_tipocs == 20 ) {    
+63: %>
+64: 
+65:     
+
+
+An error occurred at line: 94 in the jsp file: /Corsi.jsp
+iddidb.getId_tipocs cannot be resolved or is not a field
+91:     iddidb = (IdDidBean) iddid.get(i);
+92: 
+93:     //cerco le lauree magistrali     
+94:     if(iddidb.getId_tipocs == 25 || iddidb.getId_tipocs == 23 ) {
+95: %>
+96: 
+97:     
+
+
+An error occurred at line: 94 in the jsp file: /Corsi.jsp
+iddidb.getId_tipocs cannot be resolved or is not a field
+91:     iddidb = (IdDidBean) iddid.get(i);
+92: 
+93:     //cerco le lauree magistrali     
+94:     if(iddidb.getId_tipocs == 25 || iddidb.getId_tipocs == 23 ) {
+95: %>
+96: 
+97:     
+
+
+An error occurred at line: 127 in the jsp file: /Corsi.jsp
+iddidb.getId_tipocs cannot be resolved or is not a field
+124:      iddidb = (IdDidBean) iddid.get(i); 
+125: 
+126:     //cerco i dottorati
+127:     if(iddidb.getId_tipocs == 14 ) {     
+128: %>
+129: 
+130:     
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1003)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+mag 15, 2014 3:14:50 PM org.apache.catalina.core.StandardWrapperValve invoke
+Grave: Servlet.service() for servlet [jsp] in context with path [/corsostudi] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 56 in the jsp file: /Corsi.jsp
+i cannot be resolved
+53: 
+54: <body>
+55: 
+56:     <% iddidb = (IdDidBean) iddid.get(i); %>
+57: 
+58:     <h1>Corsi di studio attivi gestiti dal dipartimento <%= iddidb.getNomeDip() %></h1> <br>
+59:     CORSI DI LAUREA: <br>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 56 in the jsp file: /Corsi.jsp
+i cannot be resolved
+53: 
+54: <body>
+55: 
+56:     <% iddidb = (IdDidBean) iddid.get(i); %>
+57: 
+58:     <h1>Corsi di studio attivi gestiti dal dipartimento <%= iddidb.getNomeDip() %></h1> <br>
+59:     CORSI DI LAUREA: <br>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1003)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+mag 15, 2014 4:37:00 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:00 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:00 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:00 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:01 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:01 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:01 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:01 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:01 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:01 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:01 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:01 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:01 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:01 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 4:37:01 PM org.apache.catalina.core.ApplicationDispatcher invoke
+Avvertenza: Servlet jsp is currently unavailable
+mag 15, 2014 5:14:15 PM org.apache.catalina.core.StandardWrapperValve invoke
+Grave: Servlet.service() for servlet [jsp] in context with path [/corsostudi] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 68 in the jsp file: /Corsi.jsp
+iddidb.getCreditiTot cannot be resolved or is not a field
+65:         iddidb = (IdDidBean) iddid.get(i); 
+66: 
+67:     //cerco le lauree
+68:     if((iddidb.getId_tipocs() == 5 || iddidb.getId_tipocs() == 20 ) &&(iddidb.getCreditiTot > 1 && iddidb.getnumIns > 1)) {    
+69: %>
+70: 
+71:     
+
+
+An error occurred at line: 68 in the jsp file: /Corsi.jsp
+iddidb.getnumIns cannot be resolved or is not a field
+65:         iddidb = (IdDidBean) iddid.get(i); 
+66: 
+67:     //cerco le lauree
+68:     if((iddidb.getId_tipocs() == 5 || iddidb.getId_tipocs() == 20 ) &&(iddidb.getCreditiTot > 1 && iddidb.getnumIns > 1)) {    
+69: %>
+70: 
+71:     
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 68 in the jsp file: /Corsi.jsp
+iddidb.getCreditiTot cannot be resolved or is not a field
+65:         iddidb = (IdDidBean) iddid.get(i); 
+66: 
+67:     //cerco le lauree
+68:     if((iddidb.getId_tipocs() == 5 || iddidb.getId_tipocs() == 20 ) &&(iddidb.getCreditiTot > 1 && iddidb.getnumIns > 1)) {    
+69: %>
+70: 
+71:     
+
+
+An error occurred at line: 68 in the jsp file: /Corsi.jsp
+iddidb.getnumIns cannot be resolved or is not a field
+65:         iddidb = (IdDidBean) iddid.get(i); 
+66: 
+67:     //cerco le lauree
+68:     if((iddidb.getId_tipocs() == 5 || iddidb.getId_tipocs() == 20 ) &&(iddidb.getCreditiTot > 1 && iddidb.getnumIns > 1)) {    
+69: %>
+70: 
+71:     
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1003)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+mag 15, 2014 5:14:34 PM org.apache.catalina.core.StandardWrapperValve invoke
+Grave: Servlet.service() for servlet [jsp] in context with path [/corsostudi] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 68 in the jsp file: /Corsi.jsp
+The method getnumIns() is undefined for the type IdDidBean
+65:         iddidb = (IdDidBean) iddid.get(i); 
+66: 
+67:     //cerco le lauree
+68:     if((iddidb.getId_tipocs() == 5 || iddidb.getId_tipocs() == 20 ) &&(iddidb.getCreditiTot() > 1 && iddidb.getnumIns() > 1)) {    
+69: %>
+70: 
+71:     
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 68 in the jsp file: /Corsi.jsp
+The method getnumIns() is undefined for the type IdDidBean
+65:         iddidb = (IdDidBean) iddid.get(i); 
+66: 
+67:     //cerco le lauree
+68:     if((iddidb.getId_tipocs() == 5 || iddidb.getId_tipocs() == 20 ) &&(iddidb.getCreditiTot() > 1 && iddidb.getnumIns() > 1)) {    
+69: %>
+70: 
+71:     
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:331)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:469)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:646)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1003)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+

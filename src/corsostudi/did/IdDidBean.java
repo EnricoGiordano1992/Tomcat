@@ -10,6 +10,7 @@ public class IdDidBean {
 	private String Informativa;
 	private int NumIns;
 	private int CreditiTot;
+    private int id_tipocs;
 
 	public IdDidBean() {
 		NomeDip = null;
@@ -20,7 +21,18 @@ public class IdDidBean {
 		Informativa = null;
 		NumIns = 0;
 		CreditiTot = 0;
+        id_tipocs = 0;
 	}
+
+    public int getId_tipocs() {
+        return id_tipocs;
+    }
+
+
+    public void setId_tipocs(int id_tipocs) {
+        this.id_tipocs = id_tipocs;
+    }
+
 
 	public String getNomeDip() {
 		return NomeDip;
