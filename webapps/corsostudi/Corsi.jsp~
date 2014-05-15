@@ -97,7 +97,7 @@
     iddidb = (IdDidBean) iddid.get(i);
 
     //cerco le lauree magistrali     
-    if((iddidb.getId_tipocs() == 25 || iddidb.getId_tipocs() == 23)  &&(iddidb.getCreditiTot() > 1 && iddidb.getNumIns() > 1))) {
+    if((iddidb.getId_tipocs() == 25 || iddidb.getId_tipocs() == 23)  &&(iddidb.getCreditiTot() > 1 && iddidb.getNumIns() > 1)) {
 %>
 
      <%= iddidb.getCodice() %> - <%= iddidb.getNomeCorso() %> 

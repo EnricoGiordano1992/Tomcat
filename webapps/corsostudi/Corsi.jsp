@@ -44,7 +44,6 @@
 <% 
             Vector iddid = dbms.getIdDid(Integer.parseInt(idDip)); %>
 
-            <%= iddid.size() %>
 <%
             IdDidBean iddidb;
 %>
