@@ -58,12 +58,13 @@ public class DBMS {
 									+ "ORDER BY nomeins";
 
 
-    private String idDidEsercizio = "select dipart.nome dipartimento, codiceins, nomeins, durataanni, sede, corsostudi.informativa, count(id) numIns, count(id) CreditiTot " +
-                                    "From inserogato, corsostudi, insegn, dipart " +
-                                    "where inserogato.id_corsostudi = corsostudi.id " +
-                                        "and insegn.id = inserogato.id_insegn " +
-                                        "and dipart.id =? " +
-                                        "and inserogato.id_dipart = dipart.id";
+    private String idDidEsercizio = "select dipart.nome dipartimento, codiceins, nomeins, durataanni, sede, corsostudi.informativa, count(inserogato.id) numIns, count(inserogato.id) CreditiTot " +
+"from inserogato, corsostudi, insegn, dipart " +
+"where inserogato.id_corsostudi = corsostudi.id " +
+"and insegn.id = inserogato.id_insegn " +
+"and dipart.id =? " +
+"and inserogato.id_dipart = dipart.id and inserogato.annoaccademico like '2013/2014'"+
+"group by dipartimento, codiceins, nomeins, durataanni, sede, corsostudi.informativa";
 	
     /**
      * Costruttore della classe. Carica i driver da utilizzare per la

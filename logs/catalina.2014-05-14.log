@@ -395,3 +395,19 @@ mag 14, 2014 7:02:48 PM org.apache.catalina.loader.WebappClassLoader clearRefere
 Grave: The web application [/corsostudi] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
 mag 14, 2014 7:02:48 PM org.apache.catalina.core.StandardContext reload
 Informazioni: Reloading Context with name [/corsostudi] is completed
+mag 14, 2014 7:08:28 PM org.apache.coyote.AbstractProtocol pause
+Informazioni: Pausing ProtocolHandler ["http-bio-8080"]
+mag 14, 2014 7:08:28 PM org.apache.coyote.AbstractProtocol pause
+Informazioni: Pausing ProtocolHandler ["ajp-bio-8009"]
+mag 14, 2014 7:08:28 PM org.apache.catalina.core.StandardService stopInternal
+Informazioni: Stopping service Catalina
+mag 14, 2014 7:08:28 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+Grave: The web application [/corsostudi] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+mag 14, 2014 7:08:28 PM org.apache.coyote.AbstractProtocol stop
+Informazioni: Stopping ProtocolHandler ["http-bio-8080"]
+mag 14, 2014 7:08:28 PM org.apache.coyote.AbstractProtocol stop
+Informazioni: Stopping ProtocolHandler ["ajp-bio-8009"]
+mag 14, 2014 7:08:28 PM org.apache.coyote.AbstractProtocol destroy
+Informazioni: Destroying ProtocolHandler ["http-bio-8080"]
+mag 14, 2014 7:08:28 PM org.apache.coyote.AbstractProtocol destroy
+Informazioni: Destroying ProtocolHandler ["ajp-bio-8009"]

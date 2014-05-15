@@ -59,13 +59,14 @@
      iddidb = (IdDidBean) iddid.get(i); 
 %>
 
+    
+
+    Corsi di studio attivi gestiti dal dipartimento <%= iddidb.getNomeDip() %> <br>
+    CORSI DI LAUREA: <br>
+
+     <%= iddidb.getCodice() %> - <%= iddidb.getNomeCorso() %> 
+
     <ul>
-
-    <li> <%= iddidb.getNomeDip() %> </li>
-
-    <li> <%= iddidb.getCodice() %> </li> 
-
-    <li> <%= iddidb.getNomeCorso() %> </li> 
     
     <li> <%= iddidb.getDurata() %> </li>
 

@@ -63,7 +63,7 @@ public class DBMS {
 "where inserogato.id_corsostudi = corsostudi.id " +
 "and insegn.id = inserogato.id_insegn " +
 "and dipart.id =? " +
-"and inserogato.id_dipart = dipart.id "+
+"and inserogato.id_dipart = dipart.id and inserogato.annoaccademico like '2013/2014' "+
 "group by dipartimento, codiceins, nomeins, durataanni, sede, corsostudi.informativa";
 	
     /**
